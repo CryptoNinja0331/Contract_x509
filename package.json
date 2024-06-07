@@ -1,0 +1,47 @@
+{
+  "name": "x509-forest-of-trust",
+  "version": "1.0.0",
+  "description": "Solidity contract for storing verified X.509 certificate chains in parent pointer trees on ETH blockchain",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "migrate-kovan": "truffle migrate --network kovan",
+    "test": "echo \"\\nnote: CONTRACTS MUST BE REDEPLOYED BETWEEN TESTS or else tests will fail\\n\" && truffle test",
+    "generate-keys": "node generateKeys.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonahGroendal/x509-forest-of-trust.git"
+  },
+  "keywords": [
+    "Solidity",
+    "x509",
+    "cert",
+    "certificate"
+  ],
+  "author": "Jonah Groendal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonahGroendal/x509-forest-of-trust/issues"
+  },
+  "homepage": "https://github.com/JonahGroendal/x509-forest-of-trust#readme",
+  "dependencies": {
+    "@ensdomains/ens": "github:JonahGroendal/ens",
+    "asn1-decode": "github:JonahGroendal/asn1-decode",
+    "ens-namehash": "github:JonahGroendal/ens-namehash",
+    "ethereum-datetime": "github:JonahGroendal/ethereum-datetime",
+    "node-forge": "^0.9.1",
+    "node-rsa": "^1.0.7",
+    "sig-verify-algs": "github:JonahGroendal/sig-verify-algs.git"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.2.0",
+    "eth-ens-namehash": "^2.0.8",
+    "ganache-cli": "^6.4.3",
+    "truffle": "^5.1.53",
+    "web3": "^1.3.1"
+  }
+}
